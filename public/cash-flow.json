@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0001",
+    "image": "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1000&auto=format&fit=crop",
+    "type": "income",
+    "amount": 4500,
+    "category": "Salary",
+    "note": "Monthly base salary payment.\nReceived via direct deposit.\nAllocated for rent and utilities.\nVerified by HR department.",
+    "date": "2026-01-15T09:00:00.000Z",
+    "createdAt": "2026-01-15T10:30:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0002",
+    "image": "https://images.unsplash.com/photo-1625225233840-695456021cde?q=80&w=1000&auto=format&fit=crop",
+    "type": "expense",
+    "amount": 120,
+    "category": "Food",
+    "note": "Weekly grocery shopping trip.\nBought fresh produce and meat.\nUsed a discount loyalty card.\nPaid with personal debit card.",
+    "date": "2026-01-16T18:20:00.000Z",
+    "createdAt": "2026-01-16T18:45:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0003",
+    "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1000&auto=format&fit=crop",
+    "type": "expense",
+    "amount": 55,
+    "category": "Transport",
+    "note": "Fuel refill for the sedan.\nGas prices were slightly higher.\nFull tank reached at 40 liters.\nKept receipt for tax purposes.",
+    "date": "2026-01-14T08:15:00.000Z",
+    "createdAt": "2026-01-14T08:20:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0004",
+    "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1000&auto=format&fit=crop",
+    "type": "income",
+    "amount": 300,
+    "category": "Freelance",
+    "note": "Logo design project completion.\nClient was very satisfied.\nPayment received via PayPal.\nProject took twelve hours total.",
+    "date": "2026-01-12T14:00:00.000Z",
+    "createdAt": "2026-01-13T09:00:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0005",
+    "image": "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?q=80&w=1000&auto=format&fit=crop",
+    "type": "expense",
+    "amount": 2100,
+    "category": "Rent",
+    "note": "January apartment rent payment.\nIncludes water and trash fees.\nTransferred to landlord directly.\nStandard monthly fixed cost.",
+    "date": "2026-01-01T10:00:00.000Z",
+    "createdAt": "2026-01-01T10:05:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0006",
+    "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1000&auto=format&fit=crop",
+    "type": "income",
+    "amount": 50,
+    "category": "Gift",
+    "note": "Birthday cash from family.\nSurprise card in the mail.\nWill be put in savings.\nVery thoughtful gesture today.",
+    "date": "2026-01-10T11:30:00.000Z",
+    "createdAt": "2026-01-10T12:00:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0007",
+    "image": "https://images.unsplash.com/photo-1561414927-6d86591d0c4f?q=80&w=1000&auto=format&fit=crop",
+    "type": "expense",
+    "amount": 85,
+    "category": "Utilities",
+    "note": "Electricity bill for December.\nUsage was lower than average.\nPaid via the mobile app.\nConfirmed with reference number.",
+    "date": "2026-01-05T16:45:00.000Z",
+    "createdAt": "2026-01-05T17:00:00.000Z"
+  },
+  {
+    "_id": "65a8f1b2c9e4a1001f8e0008",
+    "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1000&auto=format&fit=crop",
+    "type": "income",
+    "amount": 1200,
+    "category": "Investment",
+    "note": "Quarterly stock market dividend.\nYield from diversified portfolio.\nAutomatically reinvested into funds.\nGrowth trending positively lately.",
+    "date": "2026-01-08T00:00:00.000Z",
+    "createdAt": "2026-01-08T14:22:00.000Z"
+  }
+]

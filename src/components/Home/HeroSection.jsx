@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <section className="bg-base-200">
@@ -19,9 +21,9 @@ export default function HeroSection() {
             <a href="#feature" className="px-6 py-3 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition">
               Get Started
             </a>
-            <button className="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-100 transition">
-              View Demo
-            </button>
+            <Link href={'/cash_flow'} className="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-100 transition">
+              View Cash flow
+            </Link>
           </div>
 
           <p className="mt-6 text-sm text-gray-500">

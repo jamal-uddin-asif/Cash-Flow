@@ -11,7 +11,7 @@ const Header = () => {
         <Link href={"/"}>Home</Link>
       </li>
       <li>
-        <Link href={"/"}>Cash View</Link>
+        <Link href={"/cash_flow"}>Cash Flow</Link>
       </li>
     </>
   );

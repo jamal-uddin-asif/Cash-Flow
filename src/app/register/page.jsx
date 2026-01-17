@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,30 +12,27 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useUplodePhoto } from "@/Hooks/useUplodePhoto";
+import { uplodePhoto } from "@/Hooks/uplodePhoto";
 
 const Register = () => {
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photo = e.target.photo.files[0];
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    const HandleSubmit = (e) =>{
-       e.preventDefault()
-       const name = e.target.name.value;
-       const photo = e.target.photo.files[0];
-       const email = e.target.email.value;
-       const password = e.target.password.value;
+    console.log({ name, photo, email, password });
 
-        console.log({name, photo, email, password})
-
-        useUplodePhoto(photo)
-    }
+    uplodePhoto(photo);
+  };
 
   return (
     <div className=" min-h-screen flex justify-center items-center">
-      <Card  className="w-full max-w-sm">
+      <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle>Create a CashFlow account</CardTitle>
-          <CardDescription>
-            Enter your email below to register
-          </CardDescription>
+          <CardDescription>Enter your email below to register</CardDescription>
           <CardAction>
             <Button variant="link">LogIn</Button>
           </CardAction>
@@ -43,12 +40,11 @@ const Register = () => {
         <CardContent>
           <form onSubmit={HandleSubmit} id="register-form">
             <div className="flex flex-col gap-6">
-
               <div className="grid gap-2">
                 <Label htmlFor="name">Name</Label>
                 <Input
                   id="name"
-                  name='name'
+                  name="name"
                   type="text"
                   placeholder="Full Name"
                   required
@@ -60,7 +56,7 @@ const Register = () => {
                 <Input
                   id="photo"
                   type="file"
-                  name='photo'
+                  name="photo"
                   placeholder="Photo"
                   required
                 />
@@ -84,13 +80,19 @@ const Register = () => {
                     Forgot your password?
                   </a> */}
                 </div>
-                <Input id="password" type="password" name='password' placeholder='Password' required />
+                <Input
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
               </div>
             </div>
           </form>
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <Button form='register-form'  type="submit" className="w-full">
+          <Button form="register-form" type="submit" className="w-full">
             Register
           </Button>
           {/* <Button variant="outline" className="w-full">
