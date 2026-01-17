@@ -27,7 +27,7 @@ export default function Home() {
 
       <FAQSection />
       <SecuritySection />
-
+      
       <Footer />
     </div>
   );
