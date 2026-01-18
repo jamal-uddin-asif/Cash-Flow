@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/shared/Container";
+import SocialLogin from "@/components/shared/SocialLogin";
 import { AuthContext } from "@/Providers/AuthContext";
 import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
@@ -81,6 +82,7 @@ const Register = () => {
                     <button className="btn text-white bg-green-500 mt-4">
                       Create Account
                     </button>
+                    <SocialLogin/>
                   </fieldset>
                 </form>
               </div>

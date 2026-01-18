@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/shared/Container";
+import SocialLogin from "@/components/shared/SocialLogin";
 import { AuthContext } from "@/Providers/AuthContext";
 import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
@@ -72,6 +73,7 @@ const LoginPage = () => {
                         />
       
                         <button className="btn bg-green-500 text-white mt-4">Login</button>
+                        <SocialLogin/>
                       </fieldset>
                     </form>
                   </div>
