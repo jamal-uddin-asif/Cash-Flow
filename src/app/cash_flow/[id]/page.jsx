@@ -6,7 +6,7 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
 const  detailsPage= async({params}) => {
     const {id} = await params
-     const res = await fetch('http://localhost:3000/cash-flow.json')
+     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/cash-flow.json`)
     const info = await res.json()
     
     const data = info.find(f=> f._id == id)
