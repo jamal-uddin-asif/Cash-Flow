@@ -1,10 +1,15 @@
+'use client'
 import link from "daisyui/components/link";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import Container from "./Container";
 import { TbBrandCoinbase } from "react-icons/tb";
+import { AuthContext } from "@/Providers/AuthContext";
+import toast from "react-hot-toast";
 
 const Header = () => {
+  const {user, signOutUser} = useContext(AuthContext)
+
   const links = (
     <>
       <li>
@@ -15,6 +20,15 @@ const Header = () => {
       </li>
     </>
   );
+
+  const handleSignOut =async()=>{
+    try {
+      await signOutUser()
+      toast.success('SignOut successful')
+    } catch (error) {
+      toast.error(error.code)
+    }
+  }
   return (
     <section className="bg-base-100 shadow-sm py-2"> 
       <Container>
@@ -55,7 +69,14 @@ const Header = () => {
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
           <div className="navbar-end">
-            <Link href={'/register'} className="btn bg-green-500">Register</Link>
+            {
+              user ? <button onClick={handleSignOut} className="btn bg-black text-white">SignOut</button>:
+            <>
+            <Link href={'/login'} className="btn bg-black text-white md:mr-2">SignIn</Link>
+            <Link href={'/register'} className="btn bg-black text-white">Register</Link>
+            </>
+
+            }
           </div>
         </div>
       </Container>

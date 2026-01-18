@@ -1,108 +1,93 @@
 "use client";
-import React from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { uplodePhoto } from "@/Hooks/uplodePhoto";
+import Container from "@/components/shared/Container";
+import { AuthContext } from "@/Providers/AuthContext";
+import { useRouter } from "next/navigation";
+import React, { useContext } from "react";
+import toast from "react-hot-toast";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  const router = useRouter() 
 
-  const HandleSubmit =async (e) => {
+
+  const handleRegister = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
-    const photo = e.target.photo.files[0];
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const form = e.target;
 
-    console.log({ name, photo, email, password });
+    const email = form.email.value;
+    const password = form.password.value;
 
-    const photoUro = await uplodePhoto(photo);
+    try {
 
-    
+      await createUser(email, password);
+      toast.success("Cash Flow Account Created");
+
+    } catch (error) {
+      console.log(error);
+      toast.error(error.code);
+      return
+    }
+
+
   };
-
   return (
-    <div className=" min-h-screen flex justify-center items-center">
-      <Card className="w-full max-w-sm">
-        <CardHeader>
-          <CardTitle>Create a CashFlow account</CardTitle>
-          <CardDescription>Enter your email below to register</CardDescription>
-          <CardAction>
-            <Button variant="link">LogIn</Button>
-          </CardAction>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={HandleSubmit} id="register-form">
-            <div className="flex flex-col gap-6">
-              <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Full Name"
-                  required
-                />
-              </div>
+    <div>
+      <div className="">
+        <Container>
+          <div className="hero  min-h-screen">
+            <div className="hero-content ">
+              <div className="card bg-base-100 w-full min-w-sm shrink-0 shadow-2xl">
+                <h2 className="text-center py-4 font-bold text-xl">
+                  Create a Cash Flow Account
+                </h2>
+                <form onSubmit={handleRegister} className="card-body">
+                  <fieldset className="fieldset">
+                    {/* name   */}
+                    <label className="label">Name</label>
+                    <input
+                      name="name"
+                      type="text"
+                      className="input"
+                      placeholder="Full Name"
+                    />
 
-              <div className="grid gap-2">
-                <Label htmlFor="photo">Photo</Label>
-                <Input
-                  id="photo"
-                  type="file"
-                  name="photo"
-                  placeholder="Photo"
-                  required
-                />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="m@example.com"
-                  required
-                />
-              </div>
-              <div className="grid gap-2">
-                <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
-                  {/* <a
-                    href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a> */}
-                </div>
-                <Input
-                  id="password"
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
+                    {/* email   */}
+                    <label className="label">Email</label>
+                    <input
+                      name="email"
+                      type="email"
+                      className="input"
+                      placeholder="Email"
+                    />
+
+                    {/* photo   */}
+                    <label className="label">Choose your photo</label>
+                    <input
+                      name="photo"
+                      type="file"
+                      className="input"
+                      placeholder="Photo"
+                    />
+
+                    {/* password  */}
+                    <label className="label">Password</label>
+                    <input
+                      name="password"
+                      type="password"
+                      className="input"
+                      placeholder="Password"
+                    />
+
+                    <button className="btn text-white bg-green-500 mt-4">
+                      Create Account
+                    </button>
+                  </fieldset>
+                </form>
               </div>
             </div>
-          </form>
-        </CardContent>
-        <CardFooter className="flex-col gap-2">
-          <Button form="register-form" type="submit" className="w-full">
-            Register
-          </Button>
-          {/* <Button variant="outline" className="w-full">
-            Login with Google
-          </Button> */}
-        </CardFooter>
-      </Card>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };

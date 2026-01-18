@@ -9,7 +9,6 @@ import ProblemSection from "@/components/Home/ProblemSection";
 import SecuritySection from "@/components/Home/SecuritySection";
 import SolutionSection from "@/components/Home/SolutionSection";
 import { Testimonial } from "@/components/Home/Testimonial";
-import { Footer } from "@/components/shared/Foo";
 import Image from "next/image";
 
 export default function Home() {
@@ -28,7 +27,7 @@ export default function Home() {
       <FAQSection />
       <SecuritySection />
       
-      <Footer />
+   
     </div>
   );
 }

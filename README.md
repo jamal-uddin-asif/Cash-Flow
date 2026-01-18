@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Applicaion name: Cash Flow
+
+# Description
+The Cash Flow Application is a full-stack web application designed to help users track, manage, and analyze their income and expenses efficiently. The platform provides a clear financial overview by categorizing transactions, calculating balances in real time, and presenting insights through a clean and user-friendly interface.
+
+# Route summary
+- /
+- /cash_flow
+- /register
+- /login
+
+## ✨ Features
+
+- 🔐 User Authentication 
+- 📊 Real-Time Cash Flow & Balance Calculation
+- 🗂️ Categorized Transactions for Better Tracking
+- 📅 Monthly & Yearly Financial Summary
+- 📈 Visual Insights with Charts & Analytics
+- 🔍 Filter & Search Transactions by Date and Category
+- 📱 Fully Responsive Design (Mobile, Tablet & Desktop)
+- ⚡ Fast & Optimized Performance
+- 🛡️ Secure Data Storage with MongoDB
+- 🌐 RESTful API Architecture
+- 🎨 Clean & User-Friendly UI
+
+## ⚙️ Setup & Installation
+
+Follow the steps below to run the Cash Flow Application locally.
+
+
+##  Clone the Repository
 
 ```bash
-npm run dev
+git clone https://github.com/jamal-uddin-asif/Cash-Flow
+cd cash-flow
+
+npm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+yarn install
