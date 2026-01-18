@@ -4,10 +4,13 @@ import { FaArrowLeft, FaDollarSign, FaRegCalendarAlt, FaRegClock, FaTags, FaQuot
 import { HiOutlineDocumentText, HiOutlineDownload, HiOutlinePencilAlt } from "react-icons/hi";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
+import info from '../../../../public/cash-flow.json'
+
 const  detailsPage= async({params}) => {
     const {id} = await params
-     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/cash-flow.json`)
-    const info = await res.json()
+
+    //  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/cash-flow.json`)
+    // const info = await res.json()
     
     const data = info.find(f=> f._id == id)
     const isIncome = data.type === 'income';

@@ -1,13 +1,14 @@
 import CashFlowCard from '@/components/CashFlow/CashFlowCard';
 import Container from '@/components/shared/Container';
-
 import React from 'react';
+
+import info from '../../../public/cash-flow.json'
 
 const cashFlow =async () => {
 
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/cash-flow.json`)
-    const info = await res.json()
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/cash-flow.json`)
+    // const info = await res.json()
 
     return (
         <div>
