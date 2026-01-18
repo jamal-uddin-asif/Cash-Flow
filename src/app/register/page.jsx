@@ -15,7 +15,8 @@ import { Label } from "@/components/ui/label";
 import { uplodePhoto } from "@/Hooks/uplodePhoto";
 
 const Register = () => {
-  const HandleSubmit = (e) => {
+
+  const HandleSubmit =async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const photo = e.target.photo.files[0];
@@ -24,7 +25,9 @@ const Register = () => {
 
     console.log({ name, photo, email, password });
 
-    uplodePhoto(photo);
+    const photoUro = await uplodePhoto(photo);
+
+    
   };
 
   return (
